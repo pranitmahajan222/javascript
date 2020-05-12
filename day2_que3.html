@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head></head> 
+<body>
+
+
+<p id="name" hidden="">Pranit Mahajan</p>
+<p id="show"></p>
+
+
+
+
+<button onclick="unHide()">UnHide Name</button> 
+
+<script>
+
+function unHide()
+{
+let elem=document.getElementById("name").textContent;
+console.log(elem);
+document.getElementById("show").innerHTML=elem;
+}
+</script>
+
+</body>
+</html>
