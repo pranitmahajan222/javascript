@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+
+<head>
+      <title>Day 3</title>
+</head>
+<body>
+    <h2>class account and method deposit</h2>
+    <p id="pp"></p>
+    <script>
+         class Account
+         {
+               constructor(name,balance)
+               {
+                  this.name=name;
+                  this.balance=balance;
+               }
+               deposit(depo)
+               {
+                  this.balance=this.balance+depo;
+               }
+               display()
+               {
+                   return `${this.name} Having ${this.balance} in a account`;
+               }
+         }
+               myAccount=new Account("pranit",1000);
+               myAccount.deposit(500);
+               document.write("<h3>" + myAccount.display() + "</h3>"); 
+               console.log(myAccount.display());
+               document.write("<br>")
+
+               myAccount1=new Account("akshay",2000);
+               myAccount1.deposit(300);
+               document.write("<h3>" + myAccount1.display() + "</h3>" );   
+               console.log(myAccount1.display());
+    </script>
+</body>
+</html>

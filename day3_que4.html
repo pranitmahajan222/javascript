@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+
+<head>
+    
+    <title>Day 3</title>
+</head>
+<body>
+    <h2>class account and method deposit</h2></br>
+    <p id="pp"></p>
+    <script>
+         class Account
+         {
+               constructor(name,balance)
+               {
+                  this.name=name;
+                  this.balance=balance;
+                  console.log(`${this.name} has RS ${this.balance} in account`);
+                  document.write(`${this.name} has RS ${this.balance} in account`);
+                  document.write("<br>")
+               }
+               deposit(depo)
+               {  
+                  console.log(`${this.name} Want to deposit RS ${depo} in account`);
+                  document.write(`${this.name} Want to deposit RS ${depo} in account`);
+                  document.write("<br>")
+                  this.balance=this.balance+depo;
+                  console.log(`RS ${depo} is deposited in ${this.name} account`);
+                  document.write(`RS ${depo} is deposited in ${this.name} account`);
+                  document.write("<br>")
+               }
+         }
+         class Current extends Account
+         {
+                constructor(name,balance)
+                {
+                     super(name,balance);
+                }
+                withdraw(debit)
+                {
+                    this.debit=debit;
+                    console.log(`${this.name} want to withdraw RS ${this.debit} from account`);
+                    document.write(`${this.name} want to withdraw RS ${this.debit} from account`);
+                    document.write("<br>")
+                    this.balance=this.balance-this.debit;
+                    console.log(`Rs ${this.debit} debited from ${this.name} account`);
+                    document.write(`Rs ${this.debit} debited from ${this.name} account`);
+                    document.write("<br>")
+                }
+                show()
+                {
+                    return `${this.name} Having ${this.balance} balance left in a account`;
+                }
+         }
+               myAccount=new Current("pranil",1000);
+               myAccount.deposit(500);
+               myAccount.withdraw(500);
+               console.log(myAccount.show()); 
+               document.write(myAccount.show());
+               document.write("<br>")
+
+               myAccount1=new Current("Akshay",2000);
+               myAccount1.deposit(300);
+               myAccount1.withdraw(200);
+               console.log(myAccount1.show());   
+               document.write(myAccount1.show());
+    </script>
+</body>
+</html>
